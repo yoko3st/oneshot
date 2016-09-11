@@ -12,14 +12,17 @@
 #   なし
 #
 # Create 2016/08/21 yoko3st@gmail.com
+# Update 2016/09/04 yoko3st@gmail.com echoするコメントについて/etc/init.d/functionsを参考に色付。改行位置を各ステップ末尾に移動。
 #
 #################################################
 
 # 前提：CentOS7、最小限インストール、インストール直後、root実行
 
 # yumアップデート
-echo -e "\nyumアップデート"
-yum update -y
+echo -en "\\033[0;39myumアップデート\n"
+yum update -y && \
+echo -en "\\033[1;32myumアップデート成功\n"
+echo ; sleep 5
 
 # SELinux無効化
 echo -e "\nSELinux無効化"
