@@ -19,10 +19,8 @@
 # 前提：CentOS7、最小限インストール、インストール直後、root実行
 
 # yumアップデート
-echo -en "\\033[0;39myumアップデート\n"
-yum update -y && \
-echo -en "\\033[1;32myumアップデート成功\n"
-echo ; sleep 5
+echo -e "\nyumアップデート"
+yum update -y
 
 # SELinux無効化
 echo -e "\nSELinux無効化"
